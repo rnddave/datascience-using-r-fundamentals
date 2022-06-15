@@ -78,7 +78,33 @@ head(testFrame,10)
 # 17 District of Columbia        601723      601723    604912    617996
 # 18              Florida      18801310    18801311  18838613  19057542
 
+# we will use the order() function to try and order the dataset by states with the largest population 
 
+sortedStates <- testFrame[order(testFrame$july11pop), ]
+
+head(sortedStates,5)
+
+#               stateName april10census april10base july10pop july11pop
+# 59              Wyoming        563626      563626    564554    568158
+# 17 District of Columbia        601723      601723    604912    617996
+# 54              Vermont        625741      625741    625909    626431
+# 43         North Dakota        672591      672591    674629    683932
+# 10               Alaska        710231      710231    714146    722718
+
+# alas this is showing the states in reverse size order!! 
+
+# this is an interesting trick, in order to reverse the order, we need to inverse the vector we want to sort against, this essentially changes numbers in to negative etc, but we don't really see that. 
+
+sortedStates <- testFrame[order(-testFrame$july11pop), ]
+
+head(sortedStates,5)
+
+#     stateName april10census april10base july10pop july11pop
+# 13 California      37253956    37253956  37338198  37691912
+# 52      Texas      25145561    25145561  25253466  25674681
+# 41   New York      19378102    19378104  19395206  19465197
+# 18    Florida      18801310    18801311  18838613  19057542
+# 22   Illinois      12830632    12830632  12841980  12869257
 
 
 
