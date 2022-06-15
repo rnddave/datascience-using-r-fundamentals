@@ -6,9 +6,10 @@ testFrame <- read.csv(url(urlToRead))
 str(testFrame)
 summary(testFrame)
 
-# we can see that the first lines are useless to our data set (useful to humans, but not useful for analyhsis)
+# we can see that the first lines are useless to our data set (useful to humans, but not useful for analysis)
 
 # let's remove them
+testFrame
 testFrame <- testFrame[-1:-8,] #remove lines 1-8
 
 # now we can also verify that the end of the data file is also useless:
@@ -16,7 +17,7 @@ summary(testFrame[,6:10])
 
 # we just have a load of 'na' in these columns
 
-# we don't want to modify the dataset at the moment, but we can focus more on the useful information
+# we don't want to modify the data set at the moment, but we can focus more on the useful information
 
 testFrame <- testFrame[,1:5]
 
